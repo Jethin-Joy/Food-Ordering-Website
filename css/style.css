@@ -1,263 +1,715 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-nav {
-    padding: 15px;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 70px;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 50px;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    position: relative;
+    z-index: 10;
+}
+
+
+/* LOGO */
+
+.logo {
+    font-family: "Zen Antique", serif;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+
+/* NAV LINKS */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 700;
+
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff5722;
+}
+
+
+/* NAV RIGHT */
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
+/* CART */
+
+.cart {
+    position: relative;
+    display: inline-block;
+
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+
+    transition: transform 0.5s ease;
+
+    right: 25px;
+}
+
+.cart:hover {
+    transform: scale(1.2);
+}
+
+
+/* CART COUNT */
+
+.cart-count {
+    position: absolute;
+
+    top: -12px;
+    right: -12px;
+
+    width: 20px;
+    height: 20px;
+
+    background-color: red;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+}
+
+
+/* ORDER BUTTON NAVBAR */
+
+.order-btn {
+    text-decoration: none;
+
+    background-color: #4e0202dc;
+    color: white;
+
+    padding: 12px 22px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: #e64a19;
+}
+
+
+/* =========================
+   HAMBURGER
+========================= */
+
+.bar {
+    display: none;
+    position: relative;
+}
+
+.bar input {
+    display: none;
+}
+
+.bar label {
+    color: #333;
+    font-size: 28px;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.bar label:hover {
+    color: #e64a19;
+}
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.mobile-menu {
+    display: none;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+    height: 720px;
+
+    overflow: hidden;
+}
+
+
+/* HERO IMAGE */
+
+.hero img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+}
+
+
+/* HERO HEADING */
+
+.hero h2 {
+    position: absolute;
+
+    top: 180px;
+    left: 8%;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+
+    color: #e64a19;
+
+    z-index: 2;
+}
+
+
+/* HERO SUBHEADING */
+
+.hero h1 {
+    position: absolute;
+
+    top: 270px;
+    left: 8%;
+
+    max-width: 550px;
+
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    color: #000000;
+
+    z-index: 2;
+}
+
+
+/* EXPLORE BUTTON */
+
+.hero .explore {
+    width: 160px;
     height: 50px;
 
-    background-image: url("../images/nav_back.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-nav .logo {
-    width: 60px;
-    height: 60px;
     position: absolute;
-    top: 9px;
-    left: 69px;
-    border-radius: 50px;
-}
 
-nav h2 {
-    position: absolute;
-    top: 13px;
-    left: 140px;
-    color: rgb(250, 246, 246);
-    font-family: "Permanent Marker", cursive;
+    top: 390px;
+    left: 15%;
+
+    color: rgb(226, 27, 27);
+    background-color: #fffaf8;
+
+    border: 2px solid #a23818;
+    border-radius: 7px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 19px;
     font-weight: 400;
-    font-style: normal;
-    font-size: 37px;
-}
-nav h2 span{
-    color: #c3160d;
+
+    z-index: 2;
+
+    transition: 0.3s ease;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 40px;
-    padding-top: 10px;
-    justify-content: center;
-}
 
-nav a {
-    text-decoration: none;
-    color: aliceblue;
-    font-family: cursive;
-    font-size: 20px;
-}
+/* ORDER BUTTON */
 
-nav button {
-    width: 120px;
-    height: 40px;
+.hero .order {
+    width: 140px;
+    height: 50px;
+
     position: absolute;
-    top: 20px;
-    right: 150px;
-    color: aliceblue;
 
-    background-color: rgb(235, 169, 36);
+    top: 390px;
+    left: 28%;
+
+    color: white;
+    background-color: #a23818;
+
     border: none;
     border-radius: 7px;
 
-    font-size: 18px;
-    font-family: "Permanent Marker", cursive;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+
+    z-index: 2;
+
+    transition: 0.3s ease;
 }
 
-nav button:hover {
-    background-color: #fd7f4d;
-    cursor: pointer;
+
+/* BUTTON HOVER */
+
+.hero .order:hover {
+    background-color: #d66311;
+    border-radius: 50px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-nav a:hover {
-    color: #f7ef00;
-    cursor: pointer;
-}
-ul .cartlogo{
-    width: 30px;
-    height: 2pc;
-    position:relative;
-    right: 30px; 
-    margin-right: -60px;
-    margin-left: -5px;
-}
-ul .pizza{
-    position:absolute;
-    right:560px;
-    width:30px;
-}
-/* ========================= */
-/* TABLET */
-/* ========================= */
+.hero .explore:hover {
+    background-color: #d4552f;
+    border-radius: 50px;
 
-@media screen and (max-width: 1000px) {
+    color: #fffaf8;
 
-    nav {
-        height: auto;
-        min-height: 80px;
+    border: none;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0 25px;
     }
 
-    nav .logo {
-        left: 25px;
-    }
-
-    nav h2 {
-        left: 95px;
-        font-size: 30px;
-    }
-
-    nav ul {
+    .nav-links {
         gap: 20px;
-        padding-top: 10px;
-        padding-left: 300px;
-        padding-right: 120px;
     }
 
-    nav a {
-        font-size: 17px;
-    }
-
-    nav button {
-        right: 20px;
-        width: 100px;
-        height: 35px;
-        font-size: 15px;
-    }
-
-    ul .cartlogo {
-        width: 28px;
-        height: 28px;
-        margin-right: -25px;
-        margin-left: -5px;
-    }
-}
-
-
-/* ========================= */
-/* MOBILE */
-/* ========================= */
-
-@media screen and (max-width: 700px) {
-
-    nav {
-        height: auto;
-        min-height: 150px;
-
-        padding: 10px;
-    }
-
-    /* Logo */
-    nav .logo {
-        width: 50px;
-        height: 50px;
-
-        top: 10px;
-        left: 15px;
-    }
-
-    /* Website name */
-    nav h2 {
-        top: 12px;
-        left: 75px;
-
-        font-size: 27px;
-    }
-
-    /* Navigation links */
-    nav ul {
-        display: flex;
-
-        flex-wrap: wrap;
-
+    .nav-right {
         gap: 15px;
-
-        padding: 70px 10px 10px 10px;
-
-        justify-content: center;
     }
 
-    nav a {
-        font-size: 16px;
+    .order-btn {
+        padding: 10px 16px;
     }
 
-    /* Button */
-    nav button {
-        width: 90px;
-        height: 32px;
 
-        top: 18px;
-        right: 15px;
+    /* HERO */
 
-        font-size: 14px;
+    .hero {
+        height: 600px;
     }
 
-    /* Cart */
-    ul .cartlogo {
-        width: 27px;
-        height: 27px;
-
-        margin-left: -10px;
-        margin-right: 0;
-
-        right: 0;
-    }
-}
-
-
-/* ========================= */
-/* SMALL MOBILE */
-/* ========================= */
-
-@media screen and (max-width: 450px) {
-
-    nav {
-        min-height: 100px;
+    .hero img {
+        object-position: 65% center;
     }
 
-    nav .logo {
-        width: 45px;
-        height: 45px;
 
-        left: 10px;
-        top: 10px;
+    /* HEADING */
+
+    .hero h2 {
+        top: 140px;
+        left: 7%;
+
+        font-size: 32px;
     }
 
-    nav h2 {
-        left: 65px;
-        top: 13px;
+
+    /* SUBHEADING */
+
+    .hero h1 {
+        top: 215px;
+        left: 7%;
+
+        max-width: 450px;
 
         font-size: 23px;
     }
 
-    nav button {
-        width: 75px;
-        height: 30px;
 
-        right: 10px;
-        top: 17px;
+    /* EXPLORE */
 
-        font-size: 12px;
+    .hero .explore {
+        top: 320px;
+        left: 7%;
+
+        width: 145px;
+        height: 45px;
+
+        font-size: 17px;
     }
 
-    nav ul {
-        gap: 12px;
 
-        padding-top: 65px;
-        padding-left: 5px;
-        padding-right: 5px;
+    /* ORDER */
+
+    .hero .order {
+        top: 320px;
+        left: 27%;
+
+        width: 125px;
+        height: 45px;
+
+        font-size: 17px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        height: 65px;
+
+        padding: 0 20px;
     }
 
-    nav a {
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+
+    /* HAMBURGER */
+
+    .bar {
+        display: block;
+    }
+
+
+    /* MOBILE MENU */
+
+    .mobile-menu {
+        position: absolute;
+
+        top: 65px;
+        right: 0;
+
+        width: 220px;
+
+        background-color: white;
+
+        display: none;
+
+        flex-direction: column;
+
+        padding: 10px 0;
+
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+        border-radius: 0 0 8px 8px;
+
+        z-index: 20;
+    }
+
+
+    /* SHOW MENU */
+
+    #menu-toggle:checked ~ .mobile-menu {
+        display: flex;
+    }
+
+
+    /* MENU LINKS */
+
+    .mobile-menu a {
+        text-decoration: none;
+
+        color: #333;
+
+        font-size: 17px;
+        font-weight: 600;
+
+        padding: 14px 22px;
+
+        transition: 0.3s ease;
+    }
+
+    .mobile-menu a:hover {
+        background-color: #fff1ec;
+
+        color: #e64a19;
+    }
+
+
+    /* MOBILE ORDER BUTTON */
+
+    .mobile-menu .mobile-order {
+        margin: 8px 15px;
+
+        padding: 11px;
+
+        text-align: center;
+
+        background-color: #4e0202dc;
+
+        color: white;
+
+        border-radius: 6px;
+
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .mobile-menu .mobile-order:hover {
+        background-color: #e64a19;
+
+        color: white;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        height: calc(100vh - 65px);
+
+        min-height: 560px;
+        max-height: 700px;
+
+        background-image: url("../images/hero2.png");
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        background-color: white;
+    }
+
+
+    /* HIDE DESKTOP IMAGE */
+
+    .hero img {
+        display: none;
+    }
+
+
+    /* HERO HEADING */
+
+    .hero h2 {
+        top: 80px;
+
+        left: 18px;
+        right: 18px;
+
+        font-size: 34px;
+
+        line-height: 1.15;
+
+        z-index: 2;
+    }
+
+
+    /* HERO SUBHEADING */
+
+    .hero h1 {
+        top: 165px;
+
+        left: 18px;
+        right: 18px;
+
+        max-width: 330px;
+
+        font-size: 19px;
+
+        line-height: 1.5;
+
+        z-index: 2;
+    }
+
+
+    /* EXPLORE BUTTON */
+
+    .hero .explore {
+        width: 115px;
+        height: 40px;
+
+        top: 290px;
+        left: 18px;
+
         font-size: 14px;
+
+        line-height: 1.5;
+
+        z-index: 2;
     }
 
-    ul .cartlogo {
-        width: 25px;
-        height: 25px;
 
-        margin-left: -8px;
+    /* ORDER BUTTON */
+
+    .hero .order {
+        width: 105px;
+        height: 40px;
+
+        top: 290px;
+        left: 145px;
+
+        font-size: 14px;
+
+        line-height: 1.5;
+
+        z-index: 2;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        height: 65px;
+
+        padding: 0 15px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .bar label {
+        font-size: 25px;
+    }
+
+
+    /* MOBILE MENU */
+
+    .mobile-menu {
+        top: 65px;
+
+        width: 200px;
+    }
+
+    .mobile-menu a {
+        font-size: 16px;
+
+        padding: 12px 18px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 530px;
+
+        background-position: center;
+    }
+
+
+    /* HEADING */
+
+    .hero h2 {
+        top: 65px;
+
+        left: 18px;
+        right: 18px;
+
+        font-size: 30px;
+
+        line-height: 1.15;
+    }
+
+
+    /* SUBHEADING */
+
+    .hero h1 {
+        top: 140px;
+
+        left: 18px;
+        right: 18px;
+
+        max-width: 290px;
+
+        font-size: 17px;
+
+        line-height: 1.45;
+    }
+
+
+    /* EXPLORE BUTTON */
+
+    .hero .explore {
+        width: 105px;
+        height: 38px;
+
+        top: 260px;
+        left: 18px;
+
+        font-size: 13px;
+    }
+
+
+    /* ORDER BUTTON */
+
+    .hero .order {
+        width: 95px;
+        height: 38px;
+
+        top: 260px;
+        left: 135px;
+
+        font-size: 13px;
     }
 }
