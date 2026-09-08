@@ -1,7 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-}
 
 * {
     margin: 0;
@@ -26,7 +22,8 @@ body {
 
     padding: 0 50px;
 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1),
+    0 -25px 50px rgba(155, 6, 6, 0.648);
 }
 
 
@@ -126,7 +123,7 @@ body {
 }
 
 .order-btn:hover {
-    background-color: #e64a19;
+    background-color: #f08007;
 }
 
 
@@ -223,3 +220,305 @@ body {
     }
 }
 
+
+/* --------------------------------   */
+
+   /* FOOD HERO SECTION */
+
+.food-hero {
+    position: relative;
+    min-height: calc(100vh - 70px);
+    background-image:url(fud.jpeg) ;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 50px 8%;
+}
+/* .food-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+} */
+
+.food-hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+
+.food-hero-content {
+    min-height: calc(100vh - 170px);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+   /* HERO TEXT */
+
+.food-hero-text {
+    width: 50%;
+}
+
+.food-small-text {
+    color: #f08007;
+        font-family: "Zen Antique", serif;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.food-hero-text h1 {
+        font-family: "Zen Antique", serif;
+    font-size: 60px;
+    line-height: 1.1;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.food-hero-text h1 span {
+    display: block;
+    color: #f08007;
+}
+
+.food-description {
+    color: white;
+            font-family: "Zen Antique", serif;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 500px;
+    margin-bottom: 35px;
+}
+
+   /* HERO BUTTONS */
+
+.food-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.food-order-btn,
+.food-menu-btn {
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+/* Order Button */
+
+.food-order-btn {
+    background-color: white;
+    color: #4e0202;
+}
+
+.food-order-btn:hover {
+    background-color: #f08007;
+    color: #4e0202;
+}
+
+/* View Menu Button */
+
+.food-menu-btn {
+    border: 2px solid white;
+    color: white;
+}
+
+.food-menu-btn:hover {
+    background-color: #f08007;
+    color: #4e0202;
+    border: none;
+}
+
+   /* HERO IMAGE */
+
+.food-hero-image {
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.food-hero-image img {
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+   /* TABLET RESPONSIVE */
+
+@media (max-width: 992px) {
+
+    .food-hero {
+        padding: 40px 5%;
+    }
+
+    .food-hero-content {
+        gap: 30px;
+    }
+
+    .food-hero-text h1 {
+        font-size: 48px;
+    }
+
+    .food-description {
+        font-size: 16px;
+    }
+
+    .food-hero-image img {
+        width: 400px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .food-hero {
+        min-height: auto;
+        padding: 50px 5%;
+    }
+
+    .food-hero-content {
+        min-height: auto;
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .food-hero-text {
+        width: 100%;
+    }
+
+    .food-hero-text h1 {
+        font-size: 42px;
+    }
+
+    .food-description {
+        margin: 0 auto 30px;
+    }
+
+    .food-buttons {
+        justify-content: center;
+    }
+
+    .food-hero-image {
+        width: 100%;
+    }
+
+    .food-hero-image img {
+        width: 350px;
+        max-width: 90%;
+    }
+
+    .delivery-info {
+        position: static;
+        justify-content: center;
+        margin-top: 30px;
+    }
+}
+
+   /* SMALL MOBILE */
+
+@media (max-width: 420px) {
+
+    .food-hero {
+        padding: 40px 20px;
+    }
+
+    .food-hero-text h1 {
+        font-size: 34px;
+    }
+
+    .food-description {
+        font-size: 15px;
+    }
+
+    .food-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .food-order-btn,
+    .food-menu-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .food-hero-image img {
+        width: 440px;
+        height: 5000px;
+    }
+}
+
+/* Delivery Information */
+.delivery-info {
+    font-family: "Zen Antique", serif;
+    position: absolute;
+    bottom: 120px;
+    right: 30px;
+    display: flex;
+    gap: 35px;
+}
+
+.delivery-info div {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.delivery-info span {
+    font-size: 22px;
+}
+
+.delivery-info p {
+    color: white;
+    font-size: 15px;
+    margin: 0;
+}
+
+/* Responsive */
+
+
+@media (max-width: 768px) {
+    .delivery-info {
+        position: static;
+        margin-top: 30px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+}
+@media (max-width: 480px) {
+
+    .delivery-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .delivery-info div {
+        justify-content: center;
+    }
+
+    .offer-badge {
+        width: 170px;
+    }
+}
+@media (max-width: 480px) {
+    .delivery-info {
+        flex-direction: column;
+    }
+}
