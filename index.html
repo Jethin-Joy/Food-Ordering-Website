@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,52 +12,75 @@
           referrerpolicy="no-referrer">
 
     <link rel="stylesheet" href="css/style.css">
-</head>
 
+    <title>Food Ordering</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600;700;900&display=swap" rel="stylesheet">
+
+
+</head>
 <body>
 
-    <!-- header part -->
+    <nav class="navbar">
 
-    <header>
-        <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+        🍜 OISHII
+        </div>
 
-            <a href="#" class="logo">
-                <span class="burger">🍔</span> Foodie<span class="dot">.</span>
+        
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Orders</a></li>
+        </ul>
+
+       
+        <div class="nav-right">
+
+            <!-- Cart -->
+            <a href="#" class="cart">
+                🛒 Cart
+                <span class="cart-count">0</span>
             </a>
 
-            <ul class="navlist">
-                <li>
-                    <a href="" class="pages">Home</a>
-                </li>
+            
+            <a href="#" class="order-btn">Order Now</a>
 
-                <li>
-                    <a href="" class="pages">Menu</a>
-                </li>
+        </div>
+        <div class="bar">
+            <a href=""><i class="fa-solid fa-bars"></i></a>
+        </div>
+    </nav>
 
-                <li>
-                    <a href="" class="pages">Orders</a>
-                </li>
-            </ul>
+    <section class="hero">
 
-            <div class="icons">
+        <div class="hero-content">
+            <span class="hero-tag">🍽️ Deliciousness at your doorstep</span>
+            <h1>Good Food.<br><span>Good Mood</span></h1>
 
-                <a href="" class="icon">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span class="cartvalue">0</span>
-                </a>
+            <p>Order your favourite meals and enjoy delicious food delivered 
+                straight to your door.</p>
 
-                <a href="" class="btn">
-                    Order Now
-                </a>
-
-                <a href="" class="hamburger">
-                    <i class="fa-solid fa-bars"></i>
-                </a>
-
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary">Order Now</a>
+                <a href="#" class="btn btn-secondary">Explore Menu</a>
             </div>
 
-        </nav>
-    </header>
+        </div>
+
+        <div class="hero-image">
+            <div class="image-circle">
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80" alt="Delicious food bowl">
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
+
+    
