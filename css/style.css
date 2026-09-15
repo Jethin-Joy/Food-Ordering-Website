@@ -466,7 +466,7 @@ body {
 .delivery-info {
     font-family: "Zen Antique", serif;
     position: absolute;
-    bottom: 120px;
+    bottom: 30px;
     right: 30px;
     display: flex;
     gap: 35px;
@@ -476,6 +476,9 @@ body {
     display: flex;
     align-items: center;
     gap: 14px;
+    background-color: #350b0b;
+    border-radius: 25px;
+    padding: 0px 15px;
 }
 
 .delivery-info span {
@@ -488,6 +491,27 @@ body {
     margin: 0;
 }
 
+@media (max-width: 425px) {
+    .delivery-info div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #350b0b;
+    border-radius: 25px;
+    padding: 0px 15px;
+}
+
+.delivery-info span {
+    font-size: 12px;
+}
+
+.delivery-info p {
+    color: white;
+    font-size: 8px;
+    margin: 0;
+}
+    
+}
 /* Responsive */
 
 
