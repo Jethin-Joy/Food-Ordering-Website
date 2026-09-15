@@ -680,12 +680,7 @@ body {
         min-height: 560px;
         max-height: 700px;
 
-        background-image: url("../images/hero2.png");
-
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-
+        background-image: none;
         background-color: white;
     }
 
