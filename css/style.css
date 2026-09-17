@@ -241,7 +241,7 @@ body {
 
     z-index: 2;
 }
-
+.h1{
     border-radius: 50%;
     background: #ffb347;
 
@@ -461,7 +461,7 @@ body {
 
         font-size: 17px;
     }
-}
+
 
 
 /* =========================
@@ -1106,4 +1106,133 @@ body {
         height: 85vw;
     }
 
+}
+/* =========================
+   MENU CATEGORIES
+========================= */
+
+.menu-categories {
+    padding: 80px 5%;
+    background-color: #fffaf4; /* Matches your body background */
+    text-align: center;
+}
+
+/* Titles */
+.section-title {
+    margin-bottom: 50px;
+}
+
+.section-title .subtitle {
+    color: #e64a19; /* Matches your brand orange */
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.section-title h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    color: #222;
+    margin: 15px 0 10px;
+}
+
+.section-title p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Grid Layout */
+.category-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap; /* Allows cards to wrap to the next line on smaller screens */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual Cards */
+.category-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 35px 20px;
+    width: 180px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
+}
+
+/* Circular Icon Background */
+.icon-circle {
+    width: 75px;
+    height: 75px;
+    background-color: #fff4ea; /* Light soft orange */
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 34px; /* Size for emojis */
+    margin-bottom: 20px;
+}
+
+/* Text Inside Cards */
+.category-card h3 {
+    font-size: 20px;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.category-card p {
+    font-size: 13px;
+    color: #888;
+    line-height: 1.5;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+    .section-title h2 {
+        font-size: 36px;
+    }
+    
+    .category-grid {
+        gap: 15px;
+    }
+    
+    .category-card {
+        width: calc(33.33% - 15px); /* 3 cards per row */
+        min-width: 160px;
+    }
+}
+
+@media (max-width: 650px) {
+    .section-title h2 {
+        font-size: 30px;
+    }
+    
+    .category-card {
+        width: calc(50% - 15px); /* 2 cards per row */
+    }
+}
+
+@media (max-width: 400px) {
+    .category-card {
+        width: 100%; /* 1 card per row */
+    }
 }
