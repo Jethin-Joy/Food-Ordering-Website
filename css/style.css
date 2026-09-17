@@ -1,4 +1,654 @@
-*{
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+
+
+.navbar {
+    height: 70px;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 50px;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1),
+    0 -25px 50px rgba(155, 6, 6, 0.648);
+}
+
+
+
+.logo {
+    font-family: "Zen Antique", serif;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 700;
+    
+
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff5722;
+}
+
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
+
+.cart {
+    position: relative;
+    display: inline-block;
+
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+
+    transition: transform 0.5s ease;
+    right: 25px;
+}
+
+.cart:hover {
+    transform: scale(1.2);
+}
+
+/* Cart Count */
+
+.cart-count {
+    position: absolute;
+
+    top: -12px;
+    right: -12px;
+
+    width: 20px;
+    height: 20px;
+
+    background-color: red;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+}
+
+
+
+.order-btn {
+    text-decoration: none;
+
+    background-color: #4e0202dc;
+    color: white;
+
+    padding: 12px 22px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: #f08007;
+}
+
+
+.bar {
+    display: none;
+}
+
+.bar a {
+    color: #333;
+    font-size: 25px;
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.bar a:hover {
+    color: #e64a19;
+}
+
+
+
+
+
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0 25px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-right {
+        gap: 15px;
+    }
+
+    .order-btn {
+        padding: 10px 16px;
+    }
+}
+
+
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: 65px;
+        padding: 0 20px;
+    }
+
+    /* Logo */
+
+    .logo {
+        font-size: 22px;
+    }
+
+    /* Hide navigation */
+
+    .nav-links {
+        display: none;
+    }
+
+    /* Hide cart and order button */
+
+    .nav-right {
+        display: none;
+    }
+
+    /* Show hamburger */
+
+    .bar {
+        display: block;
+    }
+}
+
+
+
+
+@media (max-width: 400px) {
+
+    .navbar {
+        padding: 0 15px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .bar a {
+        font-size: 23px;
+    }
+}
+
+
+/* --------------------------------   */
+
+   /* FOOD HERO SECTION */
+
+.food-hero {
+    position: relative;
+    min-height: calc(100vh - 70px);
+    background-image:url(fud.jpeg) ;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 50px 8%;
+}
+/* .food-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+} */
+
+.food-hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+
+.food-hero-content {
+    min-height: calc(100vh - 170px);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+   /* HERO TEXT */
+
+.food-hero-text {
+    width: 50%;
+}
+
+.food-small-text {
+    color: #f08007;
+        font-family: "Zen Antique", serif;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.food-hero-text h1 {
+        font-family: "Zen Antique", serif;
+    font-size: 60px;
+    line-height: 1.1;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.food-hero-text h1 span {
+    display: block;
+    color: #f08007;
+}
+
+.food-description {
+    color: white;
+            font-family: "Zen Antique", serif;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 500px;
+    margin-bottom: 35px;
+}
+
+   /* HERO BUTTONS */
+
+.food-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.food-order-btn,
+.food-menu-btn {
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+/* Order Button */
+
+.food-order-btn {
+    background-color: white;
+    color: #4e0202;
+}
+
+.food-order-btn:hover {
+    background-color: #f08007;
+    color: #4e0202;
+}
+
+/* View Menu Button */
+
+.food-menu-btn {
+    border: 2px solid white;
+    color: white;
+}
+
+.food-menu-btn:hover {
+    background-color: #f08007;
+    color: #4e0202;
+    border: none;
+}
+
+   /* HERO IMAGE */
+
+.food-hero-image {
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.food-hero-image img {
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+   /* TABLET RESPONSIVE */
+
+@media (max-width: 992px) {
+
+    .food-hero {
+        padding: 40px 5%;
+    }
+
+    .food-hero-content {
+        gap: 30px;
+    }
+
+    .food-hero-text h1 {
+        font-size: 48px;
+    }
+
+    .food-description {
+        font-size: 16px;
+    }
+
+    .food-hero-image img {
+        width: 400px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .food-hero {
+        min-height: auto;
+        padding: 50px 5%;
+    }
+
+    .food-hero-content {
+        min-height: auto;
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .food-hero-text {
+        width: 100%;
+    }
+
+    .food-hero-text h1 {
+        font-size: 42px;
+    }
+
+    .food-description {
+        margin: 0 auto 30px;
+    }
+
+    .food-buttons {
+        justify-content: center;
+    }
+
+    .food-hero-image {
+        width: 100%;
+    }
+
+    .food-hero-image img {
+        width: 350px;
+        max-width: 90%;
+    }
+
+    .delivery-info {
+        position: static;
+        justify-content: center;
+        margin-top: 30px;
+    }
+}
+
+   /* SMALL MOBILE */
+
+@media (max-width: 420px) {
+
+    .food-hero {
+        padding: 40px 20px;
+    }
+
+    .food-hero-text h1 {
+        font-size: 34px;
+    }
+
+    .food-description {
+        font-size: 15px;
+    }
+
+    .food-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .food-order-btn,
+    .food-menu-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .food-hero-image img {
+        width: 440px;
+        height: 5000px;
+    }
+}
+
+/* Delivery Information */
+.delivery-info {
+    font-family: "Zen Antique", serif;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    gap: 35px;
+}
+
+.delivery-info div {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background-color: #350b0b;
+    border-radius: 25px;
+    padding: 0px 15px;
+}
+
+.delivery-info span {
+    font-size: 22px;
+}
+
+.delivery-info p {
+    color: white;
+    font-size: 15px;
+    margin: 0;
+}
+
+@media (max-width: 425px) {
+    .delivery-info div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #350b0b;
+    border-radius: 25px;
+    padding: 0px 15px;
+}
+
+.delivery-info span {
+    font-size: 12px;
+}
+
+.delivery-info p {
+    color: white;
+    font-size: 8px;
+    margin: 0;
+}
+    
+}
+/* Responsive */
+
+
+@media (max-width: 768px) {
+    .delivery-info {
+        position: static;
+        margin-top: 30px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+}
+@media (max-width: 480px) {
+
+    .delivery-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .delivery-info div {
+        justify-content: center;
+    }
+
+    .offer-badge {
+        width: 170px;
+    }
+}
+@media (max-width: 480px) {
+    .delivery-info {
+        flex-direction: column;
+    }
+}
+
+/* ------------------------------------------------- */
+/* Category Section */
+.categories {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.categories h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+/* Grid */
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+/* Card */
+.categories h1 {
+    font-family: "Playfair Display", serif;
+}
+.category-card {
+    height: 220px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s ease;
+}
+
+/* Food Icon */
+.food-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+/* Category Name */
+.category-card h2 {
+    font-size: 21px;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+/* Description */
+.category-card p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.4;
+}
+
+/* Hover Effect */
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive - Tablet */
+@media (max-width: 1000px) {
+    .category-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 600px) {
+    .categories {
+        padding: 40px 20px;
+    }
+
+    .categories h1 {
+        font-size: 28px;
+    }
+
+    .category-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .category-card {
+        height: 200px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 400px) {
+    .category-container {
+        grid-template-columns: 1fr;
+    }
 }
